@@ -1,5 +1,15 @@
 tasks:
-  - before: |
-      echo `gp url` >> before.txt
+  - init: |
+      echo `gp url` >> init.txt
     command: |
       echo `gp url` >> command.txt
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: false
+    addCheck: true
+    addComment: false
+    addBadge: false
